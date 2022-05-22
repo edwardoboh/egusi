@@ -81,6 +81,13 @@ function populateTree({files, parent}){
             type: getType(files[i]),
             parent: pt ? `${nParent.parent}/${nParent.name}` : parent})
     }
+
+    if(Object.keys(tree).length < 1){
+        console.log(
+            chalk.redBright.bold("Template file is empty")
+        );
+        process.exit(1)
+    }
 }
 
 
@@ -119,14 +126,19 @@ function createFileFolder(output_dir){
                     console.log(
                         chalk.redBright(error.message)
                     );
+                    process.exit(1)
                 }
             })
         })
+        console.log(
+            chalk.greenBright("Successfully created all file(s) and folder(s) from template.")
+        );
         saveCreatedItem({key: output_dir, value: treeValues[0]})
     }catch(error){
         console.log(
             chalk.redBright(error.message)
-        )
+        );
+        process.exit(1)
     }
 }
 

@@ -16,7 +16,7 @@ program
 
 program
     .command("create [template_name]")
-    .description(`Creates a template file with the .${ext} extension. You can optionally create the template file with a name by entering a name (without the .${ext}).`)
+    .description(`Creates a template file with the .${ext} extension. You can optionally create the template file with a name (named template file) by entering a name (without the .${ext}).\nNote that when you create a named template file, you must use the "-t" option when running the build command, specifying the full name of the template file.`)
     .action(create_template);
 
 program

@@ -5,7 +5,7 @@ CLI tool to help you easily set up a folder(s) and file(s) structure for your pr
 ## Installation
 
 ```bash
-npm install egusi
+npm install -g egusi
 ```
 
 ## Quick Start
@@ -20,7 +20,7 @@ Egusi displays helpful error messages for unrecognised options. Always refer to 
 
 1. Find Template file
 
-```shell
+```bash
 egusi find [template_dir]
 ```
 
@@ -28,11 +28,13 @@ This command searches for an existing template file in the current directory. Yo
 
 2. Create a Template file
 
-```shell
+```bash
 egusi create [template_name]
 ```
 
-Creates a template file with the **_.egusi_** extension. You can optionally create the template file with a name by entering a name (without the .egusi)
+Creates a template file with the **_.egusi_** extension. You can optionally create the template file with a name (named template file) by entering a name (without the .egusi). Unnamed template files are of the form **.egusi**, without a name
+
+> Note that when you create a named template file, you must use the **-t** option when running the **build** command, specifying the full name of the template file. See **build** command below.
 
 3. Remove Template file
 
@@ -44,8 +46,16 @@ Removes all **_.egusi_** template file(s) in the current working directory.
 
 4. Build from Template file
 
-```shell
+```bash
+# use with unnamed template file: .egusi
 egusi build
+```
+
+OR
+
+```bash
+# use with named template file: [name].egusi
+egusi build -t example.egusi
 ```
 
 Build the boilerplate for your project in the current working directory as specified in template.

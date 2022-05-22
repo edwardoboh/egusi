@@ -44,11 +44,16 @@ function checkTemplate(template_file){
 
     if(!fs.existsSync(template_file)){
         console.log(
-            chalk.redBright("You have no Template at: "),
-            chalk.cyanBright.bold(template_file)
+            chalk.redBright(`You have no .${ext} Template file at: `),
+            chalk.cyanBright(template_file)
         );
         console.log(
-            "run", chalk.blueBright.bold('egusi create'), "to create one"
+            "Use the",
+            chalk.blueBright.bold('-t'),
+            "flag for named template file(s) OR",
+            "run",
+            chalk.blueBright.bold('egusi create'),
+            "to create an empty template"
         );
         process.exit(1);
     }
