@@ -8,7 +8,7 @@
     "egusi": "index.js"
   },
   "name": "egusi",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Easily set up a folder(s) and file(s) structure for your project.",
   "main": "index.js",
   "scripts": {},
