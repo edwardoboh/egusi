@@ -1,0 +1,43 @@
+{
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "commander": "^9.2.0",
+    "conf": "^10.1.2"
+  },
+  "bin": {
+    "egusi": "index.js"
+  },
+  "name": "egusi",
+  "version": "1.0.0",
+  "description": "Easily set up a folder(s) and file(s) structure for your project.",
+  "main": "index.js",
+  "scripts": {},
+  "author": "Edward O. Oboh",
+  "license": "MIT",
+  "devDependencies": {},
+  "keywords": [
+    "egusi",
+    "egusi-cli",
+    "files",
+    "folders",
+    "fs",
+    "boilerplate",
+    "filesystem",
+    "cli",
+    "commander",
+    "project",
+    "setup",
+    "template",
+    ".egusi",
+    "melon",
+    "soup"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/edwardoboh/egusi.git"
+  },
+  "bugs": {
+    "url": "https://github.com/edwardoboh/egusi/issues"
+  },
+  "homepage": "https://github.com/edwardoboh/egusi#readme"
+}
